@@ -4,7 +4,7 @@ import Nav from "./components/Nav";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
-import Stock from "./pages/Stock";
+import Stocks from "./pages/Stocks";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/stocks/" element={<Dashboard />} />
-        <Route path="/stock/:symbol" element={<Stock />} />
+        <Route path="/stocks/:symbol" element={<Stocks />} />
       </Routes>
     </div>
   );

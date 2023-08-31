@@ -5,7 +5,10 @@ export default function Nav(props) {
   return (
     <div className="Nav">
       <Link to="/">
-        <div>Home</div>
+        <div>iStock</div>
+      </Link>
+      <Link to="/stocks">
+        <div>Stocks</div>
       </Link>
       <Link to="/about">
         <div>About</div>

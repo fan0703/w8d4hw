@@ -1,5 +1,8 @@
-export default (props) =>{
-    const stocks = [
+import React from "react";
+import { useParams } from "react-router-dom";
+
+export default function Stock() {
+  const stocks = [
     {
       name: "Apple Inc.",
       symbol: "AAPL",
@@ -56,4 +59,15 @@ export default (props) =>{
     },
   ];
 
+  const params = useParams();
+  const symbol = params.symbol;
+  const selectStock = stocks.find((el) => {
+    return el.symbol === symbol;
+  });
+  return (
+    <div>
+      <h1>Name:{selectStock.name}</h1>
+      <h1>Price:{selectStock.lastPrice}</h1>
+    </div>
+  );
 }

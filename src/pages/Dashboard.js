@@ -1,25 +1,8 @@
 import React from "react";
-import { useState } from "react";
-import { useParams } from "react-router";
-import Stock from "./Stock";
-import Data from "../components/Data";
+import data from "../components/data";//why data cannot use
 import { Link } from "react-router-dom";
 
-export default function Dashboard(props) {
-  // // api key ?
-  // //grabbing the Home symbol from the URL Params
-  // const params = useParams();
-  // const symbol = params.symbol;
-  // //using th other tow variables to create our URL
-  // const url = ``;
-  // const [coin, setCoin] = useState("null");
-  // //function to fetch coin data
-  // const getCoin = async () => {
-  //   const response = await fetch(url);
-  //   const data = await response.jason();
-  //   setCoin(data);
-  // };
-  // return <div>Most Active Stocks</div>;
+export default () => {
   const stocks = [
     {
       name: "Apple Inc.",
@@ -75,18 +58,17 @@ export default function Dashboard(props) {
       low: 36.125,
       open: 36.58,
     },
-  ];
-
-  return(
+  ]
+  return (
     <div className="Dashboard">
-      {stocks.map((el)=>{
-        const{name,symbol} = el
-        return(
-          <Link to={`/stocks/:symbol`}>
-            <h2>{name} ({symbol})</h2>
+      {stocks.map((el) => {//need to show so inside return
+        const { name, symbol } = el;
+        return (
+          <Link to={`/stocks/${symbol}`}>
+            <h2>{name}</h2>
           </Link>
-        )
+        );
       })}
     </div>
-  )
-}
+  );
+};
