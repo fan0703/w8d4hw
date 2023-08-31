@@ -63,6 +63,7 @@ export default function Home(props) {
   
   return (
     <div className="Home">
+      Home Page
       {stocks.map((el) => {
         const { name, symbol } = el;
         return (
