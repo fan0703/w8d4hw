@@ -2,6 +2,9 @@ import React from 'react'
 
 export default function Stock() {
   return (
-    <div>everty Stock</div>
+    <div>everty Stock
+
+      <p>{price}</p>
+    </div>
   )
 }
