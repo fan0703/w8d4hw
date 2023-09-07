@@ -1,4 +1,4 @@
-export default (props) =>{
+
     const stocks = [
     {
       name: "Apple Inc.",
@@ -55,5 +55,4 @@ export default (props) =>{
       open: 36.58,
     },
   ];
-
-}
+export default stocks
